@@ -33,7 +33,7 @@ buttons_state=[0,0,0,0]
 root = Tk()
 root.title("F2Mi")
 
-mainframe = ttk.Frame(root, padding="3 3 12 12")
+mainframe = ttk.Frame(root, padding="0 0 0 0")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 mainframe.columnconfigure(0, weight=1)
 mainframe.rowconfigure(0, weight=1)
@@ -66,16 +66,12 @@ for i in range(len(states)):
 
 row.bind("<Button-1>", callback)
 
-#ttk.Label(mainframe, text="1").grid(column=0, row=2, sticky=E)
-#ttk.Label(mainframe, text="2").grid(column=1, row=2, sticky=E)
-#ttk.Label(mainframe, text="3").grid(column=2, row=2, sticky=E)
-#ttk.Label(mainframe, text="4").grid(column=3, row=2, sticky=E)
-
 ok_button=ttk.Button(mainframe, text="ok", command=change_state)
 ok_button.grid(column=0, row=3, columnspan=4, sticky=(W, E))
-for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
+#for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
 
 newgame_button.focus()
 root.bind('<Return>', enter)
+
 
 root.mainloop()
