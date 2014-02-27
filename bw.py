@@ -83,7 +83,7 @@ new_task()
 goon=True
 parsed=False
 while goon:
-	inp = raw_input("Press button: ")
+	inp = input("Press button: ")
 	for i in range(1,m+1):
 		if str(i)==inp:
 			press(i-1)
